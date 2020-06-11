@@ -1,0 +1,11 @@
+@import '~material-design-icons/iconfont/material-icons.css';
+
+@tailwind base;
+@tailwind components;
+
+html, body {
+  @apply h-full;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@tailwind utilities;
