@@ -1,22 +1,17 @@
 <?php
 
 return [
-
     'default' => env('QUEUE_CONNECTION', 'sync'),
-
     'connections' => [
-
         'sync' => [
             'driver' => 'sync',
         ],
-
         'database' => [
             'driver' => 'database',
             'table' => 'jobs',
             'queue' => 'default',
             'retry_after' => 90,
         ],
-
         'beanstalkd' => [
             'driver' => 'beanstalkd',
             'host' => 'localhost',
@@ -24,7 +19,6 @@ return [
             'retry_after' => 90,
             'block_for' => 0,
         ],
-
         'sqs' => [
             'driver' => 'sqs',
             'key' => env('AWS_ACCESS_KEY_ID'),
@@ -34,7 +28,6 @@ return [
             'suffix' => env('SQS_SUFFIX'),
             'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
         ],
-
         'redis' => [
             'driver' => 'redis',
             'connection' => 'default',
@@ -42,13 +35,10 @@ return [
             'retry_after' => 90,
             'block_for' => null,
         ],
-
     ],
-
     'failed' => [
         'driver' => env('QUEUE_FAILED_DRIVER', 'database'),
         'database' => env('DB_CONNECTION', 'mysql'),
         'table' => 'failed_jobs',
     ],
-
 ];

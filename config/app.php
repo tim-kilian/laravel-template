@@ -1,29 +1,17 @@
 <?php
 
 return [
-
     'name' => env('APP_NAME', 'Laravel'),
-
     'env' => env('APP_ENV', 'production'),
-
     'debug' => (bool)env('APP_DEBUG', false),
-
     'url' => env('APP_URL', 'http://localhost'),
-
     'asset_url' => env('ASSET_URL', null),
-
     'timezone' => 'UTC',
-
     'locale' => 'en',
-
     'fallback_locale' => 'en',
-
     'faker_locale' => 'en_US',
-
     'key' => env('APP_KEY'),
-
     'cipher' => 'AES-256-CBC',
-
     'providers' => [
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
@@ -53,7 +41,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
     ],
-
     'aliases' => [
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
@@ -92,5 +79,4 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
     ],
-
 ];

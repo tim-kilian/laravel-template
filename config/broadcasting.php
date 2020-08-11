@@ -1,11 +1,8 @@
 <?php
 
 return [
-
     'default' => env('BROADCAST_DRIVER', 'null'),
-
     'connections' => [
-
         'pusher' => [
             'driver' => 'pusher',
             'key' => env('PUSHER_APP_KEY'),
@@ -16,20 +13,15 @@ return [
                 'useTLS' => true,
             ],
         ],
-
         'redis' => [
             'driver' => 'redis',
             'connection' => 'default',
         ],
-
         'log' => [
             'driver' => 'log',
         ],
-
         'null' => [
             'driver' => 'null',
         ],
-
     ],
-
 ];
