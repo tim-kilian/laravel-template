@@ -14,11 +14,11 @@
   </head>
   <body>
     <div id="app">
-      @include('includes/nav/header')
+      @include('partials/nav/header')
 
       @yield('content')
 
-      @include('includes/nav/footer')
+      @include('partials/nav/footer')
     </div>
 
     <!-- Scripts -->
