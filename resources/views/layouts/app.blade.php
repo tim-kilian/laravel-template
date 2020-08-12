@@ -17,13 +17,17 @@
   </head>
   <body class="h-full">
     <div id="app" class="h-full flex flex-col">
-      @include('partials/nav/header')
+      <header>
+        @include('partials/nav/header')
+      </header>
 
       <main class="flex-grow">
         @yield('content')
       </main>
 
-      @include('partials/nav/footer')
+      <footer>
+        @include('partials/nav/footer')
+      </footer>
     </div>
 
     <!-- Scripts -->
