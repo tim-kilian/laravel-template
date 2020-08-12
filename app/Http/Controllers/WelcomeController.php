@@ -6,8 +6,8 @@ use Illuminate\Support\Facades\Auth;
 class WelcomeController extends Controller {
 
     public function index() {
-        if (Auth::hasUser()) {
-            redirect('home');
+        if (!is_null(Auth::user())) {
+            return redirect('home');
         }
         return view('welcome');
     }
