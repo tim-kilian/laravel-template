@@ -15,11 +15,13 @@
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="{{ mix('/css/app.css') }}">
   </head>
-  <body>
-    <div id="app">
+  <body class="h-full">
+    <div id="app" class="h-full flex flex-col">
       @include('partials/nav/header')
 
-      @yield('content')
+      <main class="flex-grow">
+        @yield('content')
+      </main>
 
       @include('partials/nav/footer')
     </div>
