@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const fs = require('fs');
 
 require('laravel-mix-purgecss');
 
@@ -11,7 +12,9 @@ mix.js(
     require('tailwindcss'),
 );
 
-mix.copy('resources/fonts', 'public/fonts');
+if (fs.existsSync('resources/fonts')) {
+    mix.copyDirectory('resources/fonts', 'public/fonts');
+}
 
 mix.webpackConfig({
     plugins: [
